@@ -1,52 +1,71 @@
-/* Basic navbar styling */
+/* 🌟 CHANGE 1: Better font and background */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif; /* CHANGED */
     margin: 0;
+    background: linear-gradient(to right, #141E30, #243B55); /* CHANGED */
 }
 
+/* 🌟 CHANGE 2: Navbar styling */
 .navbar {
-    background-color: #457cd9;
+    background: rgba(0, 0, 0, 0.4); /* CHANGED */
+    backdrop-filter: blur(8px); /* CHANGED */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* CHANGED */
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.navbar ul li {
-    position: relative;
-}
-
+/* 🌟 CHANGE 3: Menu items spacing & hover */
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 14px 22px; /* CHANGED */
     display: block;
+    transition: all 0.3s ease; /* CHANGED */
 }
 
 .navbar a:hover {
-    background-color: #8496f0;
+    background-color: rgba(255, 255, 255, 0.2); /* CHANGED */
+    border-radius: 6px; /* CHANGED */
 }
 
-/* Dropdown menu hidden by default */
+/* 🌟 CHANGE 4: Dropdown menu */
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #2745b4;
-    min-width: 160px;
+    background: rgba(0, 0, 0, 0.85); /* CHANGED */
+    min-width: 180px; /* CHANGED */
     z-index: 1;
     flex-direction: column;
+    border-radius: 6px; /* CHANGED */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* CHANGED */
+    opacity: 0; /* CHANGED */
+    transform: translateY(10px); /* CHANGED */
+    transition: all 0.3s ease; /* CHANGED */
 }
 
 .dropdown-menu li a {
     padding: 12px 16px;
+    transition: background 0.3s ease; /* CHANGED */
 }
 
-/* Show dropdown menu on hover */
+.dropdown-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1); /* CHANGED */
+}
+
+/* 🌟 CHANGE 5: Dropdown hover effect */
 .dropdown:hover .dropdown-menu {
-    display: block;
+    display: flex;
+    opacity: 1; /* CHANGED */
+    transform: translateY(0); /* CHANGED */
+}
+
+/* 🌟 CHANGE 6: Arrow icon rotation */
+.arrow {
+    font-size: 0.8em; /* CHANGED */
+    margin-left: 6px; /* CHANGED */
+    transition: transform 0.3s ease; /* CHANGED */
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(180deg); /* CHANGED */
 }
